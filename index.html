@@ -28,26 +28,27 @@
           <i class="fa-solid fa-dollar-sign dollar"></i>
           <input type="number" class="bill-input" />
         </div>
-        <div class="tip">
+        <div class="tip-container">
           <div class="tip-txt">
             <label for="">Select Tip %</label>
           </div>
           <div class="tip-option">
-            <div class="per-btn-5">5%</div>
-            <div class="per-btn-10">10%</div>
-            <div class="per-btn-15">15%</div>
-            <div class="per-btn-25">25%</div>
-            <div class="per-btn-50">50%</div>
+            <div class="btn-5 tip">5%</div>
+            <div class="btn-10 tip">10%</div>
+            <div class="btn-15 tip active">15%</div>
+            <div class="btn-25 tip">25%</div>
+            <div class="btn-50 tip">50%</div>
             <input class="custom-input" type="number" placeholder="custom" />
           </div>
         </div>
         <label for="">Number of People</label>
+        <label for="" class="err">Can't be zero</label>
         <div>
           <i class="fa-solid fa-user user"></i>
           <input type="number" class="people-input" />
         </div>
         <div class="calculator">
-          <div class="tip">
+          <div class="tip-calc">
             <p class="tip-txt">Tip Amount</p>
             <p class="person-txt">/ person</p>
             <div class="tip-number">$0.00</div>

@@ -21,7 +21,7 @@ label {
 input {
   background: #f3f9fa;
   border-radius: 5px;
-  border: none;
+  border: 1px;
   outline: none;
   padding: 5px;
   text-align: right;
@@ -29,6 +29,10 @@ input {
   font-size: 24px;
   font-family: "Space Mono", sans-serif;
   margin-top: 0.37rem;
+}
+
+input:focus {
+  outline: 2px solid #26c2ae;
 }
 
 input::-webkit-outer-spin-button,
@@ -79,6 +83,10 @@ input[type="number"] {
   margin-top: 2rem;
 }
 
+.option {
+  margin-right: 0px;
+}
+
 .tip-option {
   margin-top: 1rem;
   display: grid;
@@ -88,11 +96,11 @@ input[type="number"] {
   margin-bottom: 2rem;
 }
 
-.per-btn-5,
-.per-btn-10,
-.per-btn-15,
-.per-btn-25,
-.per-btn-50 {
+.btn-5,
+.btn-10,
+.btn-15,
+.btn-25,
+.btn-50 {
   font-family: "Space Mono";
   font-style: normal;
   font-weight: 700;
@@ -107,7 +115,7 @@ input[type="number"] {
   cursor: pointer;
 }
 
-.per-btn-15 {
+.active {
   background: #26c2ae;
   color: #00474b;
 }
@@ -120,9 +128,14 @@ input[type="number"] {
 .user {
   position: absolute;
   margin-left: 19px;
-  margin-top: 20px;
+  margin-top: 23px;
   z-index: 2;
   color: #9ebbbd;
+}
+.err {
+  padding-left: 30px;
+  visibility: hidden;
+  color: #e17457;
 }
 
 .calculator {
@@ -201,6 +214,9 @@ input[type="number"] {
     width: 379px;
     padding: 9px;
   }
+  input:focus {
+    outline: 2px solid #26c2ae;
+  }
 
   .custom-input {
     width: 100px;
@@ -212,8 +228,13 @@ input[type="number"] {
     flex-direction: row;
     border-radius: 1.4rem;
     padding: 2.3rem;
+
     padding-right: 46px;
     height: 481px;
+  }
+
+  .option {
+    margin-left: -20px;
   }
 
   .tip-option {
@@ -229,7 +250,8 @@ input[type="number"] {
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    padding: 48px 38px;
+    padding: 20px 18px 5px;
+    margin-left: 30px;
     position: absolute;
     left: 475px;
     bottom: 45px;
@@ -243,6 +265,37 @@ input[type="number"] {
     align-items: center;
     margin-top: 3rem;
     margin-bottom: 2.5rem;
-    margin-left: -5rem;
+    margin-left: -40px;
+  }
+
+  .total {
+    margin-bottom: 80px;
+  }
+
+  .total-number,
+  .tip-number {
+    font-size: 48px;
+  }
+
+  .err {
+    padding-left: 100px;
+    visibility: hidden;
+    color: #e17457;
+  }
+
+  .dollar {
+    position: absolute;
+    margin-left: 19px;
+    margin-top: 23px;
+    z-index: 2;
+    color: #9ebbbd;
+  }
+
+  .user {
+    position: absolute;
+    margin-left: 19px;
+    margin-top: 23px;
+    z-index: 2;
+    color: #9ebbbd;
   }
 }
