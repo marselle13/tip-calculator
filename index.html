@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,11 +9,60 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Google Fonts -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
       rel="stylesheet"
-      href="https://fonts.google.com/specimen/Space+Mono"
+    />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
   </head>
   <body>
+    <img class="splitter" src="images/SPLITTER.png" alt="splitter" />
+
+    <div class="tip-calculator">
+      <div class="option">
+        <label for="">Bill</label>
+        <div>
+          <i class="fa-solid fa-dollar-sign dollar"></i>
+          <input type="number" class="bill-input" />
+        </div>
+        <div class="tip">
+          <div class="tip-txt">
+            <label for="">Select Tip %</label>
+          </div>
+          <div class="tip-option">
+            <div class="per-btn-5">5%</div>
+            <div class="per-btn-10">10%</div>
+            <div class="per-btn-15">15%</div>
+            <div class="per-btn-25">25%</div>
+            <div class="per-btn-50">50%</div>
+            <input class="custom-input" type="number" placeholder="custom" />
+          </div>
+        </div>
+        <label for="">Number of People</label>
+        <div>
+          <i class="fa-solid fa-user user"></i>
+          <input type="number" class="people-input" />
+        </div>
+        <div class="calculator">
+          <div class="tip">
+            <p class="tip-txt">Tip Amount</p>
+            <p class="person-txt">/ person</p>
+            <div class="tip-number">$0.00</div>
+          </div>
+
+          <div class="total">
+            <p class="total-txt">Total</p>
+            <p class="person-txt">/ person</p>
+            <div class="total-number">$0.00</div>
+          </div>
+
+          <button class="reset-btn">RESET</button>
+        </div>
+      </div>
+    </div>
     <!-- Jquery -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"

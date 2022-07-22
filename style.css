@@ -1,0 +1,248 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", sans-serif;
+}
+
+label {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0.6rem;
+
+  /* identical to box height */
+
+  color: #5e7a7d;
+}
+
+input {
+  background: #f3f9fa;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  text-align: right;
+  padding-right: 17px;
+  font-size: 24px;
+  font-family: "Space Mono", sans-serif;
+  margin-top: 0.37rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.splitter {
+  display: block;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  margin-left: 8rem;
+}
+
+.tip-calculator {
+  background-color: White;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  border-radius: 25px;
+  margin-right: 2px;
+  position: relative;
+  right: 7px;
+}
+
+.option {
+  padding-left: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 1.5rem;
+}
+
+.dollar {
+  position: absolute;
+  margin-left: 19px;
+  margin-top: 20px;
+  z-index: 2;
+  color: #9ebbbd;
+}
+
+.tip-txt {
+  margin-top: 2rem;
+}
+
+.tip-option {
+  margin-top: 1rem;
+  display: grid;
+  row-gap: 2rem;
+  grid-template-columns: 144px 144px;
+  column-gap: 18px;
+  margin-bottom: 2rem;
+}
+
+.per-btn-5,
+.per-btn-10,
+.per-btn-15,
+.per-btn-25,
+.per-btn-50 {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  background: #00474b;
+  border-radius: 5px;
+  color: #ffffff;
+  height: 48px;
+  padding-top: 7px;
+  cursor: pointer;
+}
+
+.per-btn-15 {
+  background: #26c2ae;
+  color: #00474b;
+}
+
+.custom-input {
+  height: 48px;
+  margin-top: 0px;
+}
+
+.user {
+  position: absolute;
+  margin-left: 19px;
+  margin-top: 20px;
+  z-index: 2;
+  color: #9ebbbd;
+}
+
+.calculator {
+  background: #00474b;
+  border-radius: 15px;
+  color: white;
+  padding-top: 25px;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+
+.tip-txt,
+.total-txt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.7rem;
+}
+
+.person-txt {
+  margin-top: -30px;
+  color: #7f9d9f;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.tip-number,
+.total-number {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 47px;
+  text-align: right;
+  color: #26c2ae;
+
+  position: relative;
+  bottom: 60px;
+  right: 22px;
+}
+
+.total {
+  margin-top: -25px;
+}
+
+.reset-btn {
+  margin-bottom: 1.5rem;
+  margin-top: -1.5rem;
+  background: #26c2ae;
+  border-radius: 5px;
+
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+
+  /* identical to box height */
+  text-align: center;
+  padding: 9px 115px;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 379px;
+    padding: 9px;
+  }
+
+  .custom-input {
+    width: 100px;
+    height: 39px;
+  }
+
+  .tip-calculator {
+    width: 920px;
+    flex-direction: row;
+    border-radius: 1.4rem;
+    padding: 2.3rem;
+    padding-right: 46px;
+    height: 481px;
+  }
+
+  .tip-option {
+    column-gap: 17px;
+    margin-bottom: 3.2rem;
+    grid-template-columns: 117px 117px 117px;
+    row-gap: 1.2em;
+  }
+
+  .calculator {
+    margin-left: auto;
+    width: 413px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 48px 38px;
+    position: absolute;
+    left: 475px;
+    bottom: 45px;
+  }
+  .reset-btn {
+    margin-top: 55px;
+  }
+
+  .splitter {
+    display: block;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+    margin-left: -5rem;
+  }
+}
