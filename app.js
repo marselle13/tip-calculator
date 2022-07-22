@@ -8,7 +8,7 @@ const error = document.querySelector(".err");
 
 billInput.value = 0.0;
 peopleInput.value = 1;
-tip.value = 0.0;
+tip.value = 0.15;
 customInput.value = "";
 
 billInput.addEventListener("input", billInputNum);
