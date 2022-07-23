@@ -66,8 +66,6 @@ function calculateTip() {
     let tipAmount = (billInput.value * tip.value) / peopleInput.value;
     let total =
       (Number(billInput.value) + Number(tipAmount)) / peopleInput.value;
-    console.log(billInput.value);
-    console.log(tip.value);
     personTip.innerHTML = `$${tipAmount.toFixed(2)}`;
     totalTip.innerHTML = `$${total.toFixed(2)}`;
   }
