@@ -5,11 +5,15 @@ const tip = document.querySelectorAll(".tip");
 const customInput = document.querySelector(".custom-input");
 const resetBtn = document.querySelector(".reset-btn");
 const error = document.querySelector(".err");
+const personTip = document.querySelector(".tip-number");
+const totalTip = document.querySelector(".total-number");
 
 billInput.value = 0.0;
 peopleInput.value = 1;
 tip.value = 0.15;
 customInput.value = "";
+personTip.innerHTML = `$${(0.0).toFixed(2)}`;
+totalTip.innerHTML = `$${(0.0).toFixed(2)}`;
 
 billInput.addEventListener("input", billInputNum);
 peopleInput.addEventListener("input", peopleInputNum);
@@ -60,10 +64,12 @@ function clickbtn(e) {
 function calculateTip() {
   if (peopleInput.value >= 1) {
     let tipAmount = (billInput.value * tip.value) / peopleInput.value;
-    let total = (billInput.value * tipAmount) / peopleInput.value;
-
-    $(".tip-number").text(`$${tipAmount.toFixed(2)}`);
-    $(".total-number").text(`$${total.toFixed(2)}`);
+    let total =
+      (Number(billInput.value) + Number(tipAmount)) / peopleInput.value;
+    console.log(billInput.value);
+    console.log(tip.value);
+    personTip.innerHTML = `$${tipAmount.toFixed(2)}`;
+    totalTip.innerHTML = `$${total.toFixed(2)}`;
   }
 }
 
