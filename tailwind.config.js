@@ -11,6 +11,9 @@ module.exports = {
         "light-grayish-cyan": "hsl(185, 41%, 84%)",
         "light-cyan": "hsl(189, 41%, 97%)",
       },
+      content: {
+        link: 'url("/images/icon-dollar.svg")',
+      },
     },
   },
   plugins: [],
