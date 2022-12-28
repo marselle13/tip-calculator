@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "calculator";
+  src: url("../fonts/SpaceMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "calculator-bold";
+  src: url("../fonts/SpaceMono-Bold.ttf") format("truetype");
+}
+
+body {
+  font-family: "calculator-bold", sans-serif;
+  background-color: hsl(185, 41%, 84%);
+}
