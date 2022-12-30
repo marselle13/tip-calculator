@@ -12,6 +12,7 @@
       href="../images/favicon-32x32.png"
     />
     <link href="../dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="input.css" />
     <title>Tip calculator app</title>
   </head>
   <body class="">
@@ -23,7 +24,7 @@
     >
       <div class="lg:w-1/2 lg:space-y-[40px] space-y-[32px]">
         <div class="flex flex-col">
-          <label for="bill-input" class="text-dark-cyan">Bill</label>
+          <label for="bill" class="text-dark-cyan">Bill</label>
           <div class="relative mt-[6px]">
             <div
               class="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-4"
@@ -32,51 +33,61 @@
             </div>
             <input
               type="text"
-              class="bg-light-cyan py-1 w-full border-none border focus:outline-none text-right text-very-dark-cyan text-2xl pr-4 pl-8 rounded"
+              class="bill bg-light-cyan py-1 w-full border-none border focus:outline-strong-cyan text-right text-very-dark-cyan text-2xl pr-4 pl-8 rounded cursor-pointer"
               placeholder=""
             />
           </div>
         </div>
         <div class="">
-          <label for="" class="text-dark-cyan">Select Tip %</label>
+          <label for="tip" class="text-dark-cyan">Select Tip %</label>
           <div class="grid grid-cols-2 gap-4 mt-4 lg:grid-cols-3">
-            <div
-              class="text-center bg-very-dark-cyan rounded py-[6px] cursor-pointer"
+            <button
+              class="btn text-center rounded py-[6px] cursor-pointer text-2xl"
+              id="but1"
             >
-              <h4 class="text-white text-2xl">5%</h4>
+              5%
+            </button>
+            <div
+              class="btn text-center bg-very-dark-cyan rounded py-[6px] cursor-pointer text-2xl"
+              id="but2"
+            >
+              10%
             </div>
             <div
-              class="text-center bg-very-dark-cyan rounded py-[6px] cursor-pointer"
+              class="btn text-center bg-very-dark-cyan rounded py-[6px] cursor-pointer text-2xl"
+              id="but3"
             >
-              <h4 class="text-white text-2xl">10%</h4>
+              15%
             </div>
             <div
-              class="text-center bg-strong-cyan rounded py-[6px] cursor-pointer"
+              class="btn text-center bg-very-dark-cyan rounded py-[6px] cursor-pointer text-2xl"
+              id="but4"
             >
-              <h4 class="text-very-dark-cyan text-2xl">15%</h4>
+              25%
             </div>
             <div
-              class="text-center bg-very-dark-cyan rounded py-[6px] cursor-pointer"
+              class="btn text-center bg-very-dark-cyan rounded py-[6px] cursor-pointer text-2xl"
+              id="but5"
             >
-              <h4 class="text-white text-2xl">25%</h4>
-            </div>
-            <div
-              class="text-center bg-very-dark-cyan rounded py-[6px] cursor-pointer"
-            >
-              <h4 class="text-white text-2xl">50%</h4>
+              50%
             </div>
             <input
               type="text"
               name=""
               placeholder="Custom"
-              class="text-right text-2xl text-very-dark-cyan pr-4 rounded"
+              class="tip text-right text-2xl text-very-dark-cyan pr-4 rounded cursor-pointer focus:outline-strong-cyan"
             />
           </div>
         </div>
         <div class="flex flex-col">
-          <label for="bill-input" class="text-dark-cyan"
-            >Number of People</label
-          >
+          <div class="flex justify-between">
+            <label for="people-input" class="text-dark-cyan"
+              >Number of People</label
+            >
+            <span for="" class="hidden text-[#E17457] error"
+              >Can't be zero or Letter</span
+            >
+          </div>
           <div class="relative mt-[6px]">
             <div
               class="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-4"
@@ -85,7 +96,7 @@
             </div>
             <input
               type="text"
-              class="bg-light-cyan py-1 w-full border-none border focus:outline-none text-right text-very-dark-cyan text-2xl pr-4 pl-8 rounded"
+              class="people bg-light-cyan py-1 w-full focus:outline-strong-cyan text-right text-very-dark-cyan text-2xl pr-4 pl-8 rounded cursor-pointer"
               placeholder=""
             />
           </div>
@@ -100,22 +111,28 @@
               <p class="text-white">Tip Amount</p>
               <span class="text-[13px] text-grayish-cyan">/ person</span>
             </div>
-            <h4 class="text-[32px] text-strong-cyan lg:text-5xl">$4.27</h4>
+            <h4 class="amount text-[32px] text-strong-cyan lg:text-5xl">
+              $4.27
+            </h4>
           </div>
           <div class="flex justify-between">
             <div>
               <p class="text-white">Total</p>
               <span class="text-[13px] text-grayish-cyan">/ person</span>
             </div>
-            <h4 class="text-[32px] text-strong-cyan lg:text-5xl">$32.79</h4>
+            <h4 class="total text-[32px] text-strong-cyan lg:text-5xl">
+              $32.79
+            </h4>
           </div>
         </div>
         <button
-          class="uppercase bg-strong-cyan w-full text-xl py-[9px] rounded text-very-dark-cyan"
+          class="reset uppercase bg-strong-cyan w-full text-xl py-[9px] rounded text-very-dark-cyan"
         >
           RESET
         </button>
       </div>
     </section>
+
+    <script src="app.js"></script>
   </body>
 </html>
