@@ -43,8 +43,8 @@ class App {
 
         if (bill && tip && people) {
           tipAmount = (bill * tip) / people;
-          console.log(tipAmount);
-          tipTotal = tipAmount + bill;
+
+          tipTotal = tipAmount + bill / people;
           inputAmount.textContent = tipAmount.toFixed(2);
           inputTotal.textContent = tipTotal.toFixed(2);
         }
@@ -59,6 +59,12 @@ class App {
   }
 
   _calculateTip() {
+    if (!isFinite(inputPeople.value) || inputPeople.value <= 0) {
+      error.classList.remove("hidden");
+    } else {
+      error.classList.add("hidden");
+    }
+
     bill = +inputBill.value;
     people = +inputPeople.value;
     if (inputTip.value) {
@@ -67,9 +73,7 @@ class App {
 
     if (bill && tip && people) {
       tipAmount = (bill * tip) / people;
-      console.log(tipAmount);
-      tipTotal = tipAmount + bill;
-
+      tipTotal = tipAmount + bill / people;
       inputAmount.textContent = tipAmount.toFixed(2);
       inputTotal.textContent = tipTotal.toFixed(2);
     }
