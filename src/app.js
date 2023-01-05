@@ -15,11 +15,15 @@ let tipTotal;
 let tip;
 let bill;
 let people;
-inputAmount.textContent = "0.0";
-inputTotal.textContent = "0.0";
+inputAmount.textContent = "0.00";
+inputTotal.textContent = "0.00";
 
 class App {
   constructor() {
+    this.bill = 0;
+    this.tip = 0;
+    this.people = 0;
+
     this._changeButton();
 
     inputs.forEach((input) => {
@@ -80,11 +84,14 @@ class App {
   }
 
   _reset() {
+    bill = "";
+    people = "";
+    tip = "";
     inputBill.value = "";
     inputPeople.value = "";
     inputTip.value = "";
-    inputAmount.textContent = "0.0";
-    inputTotal.textContent = "0.0";
+    inputAmount.textContent = "0.00";
+    inputTotal.textContent = "0.00";
     btn.forEach((btnSelected) => {
       btnSelected.classList.remove("selected-btn");
       btnSelected.classList.add("btn");
