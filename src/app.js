@@ -15,15 +15,11 @@ let tipTotal;
 let tip;
 let bill;
 let people;
-inputAmount.textContent = "0.00";
-inputTotal.textContent = "0.00";
+inputAmount.textContent = "$0.00";
+inputTotal.textContent = "$0.00";
 
 class App {
   constructor() {
-    this.bill = 0;
-    this.tip = 0;
-    this.people = 0;
-
     this._changeButton();
 
     inputs.forEach((input) => {
@@ -32,7 +28,7 @@ class App {
     inputTip.addEventListener("click", this._disableBtn);
     reset.addEventListener("click", this._reset);
   }
-
+  //calculate tip with select tip input
   _changeButton() {
     btn.forEach((btnSelect) => {
       btnSelect.addEventListener("click", function () {
@@ -49,19 +45,13 @@ class App {
           tipAmount = (bill * tip) / people;
 
           tipTotal = tipAmount + bill / people;
-          inputAmount.textContent = tipAmount.toFixed(2);
-          inputTotal.textContent = tipTotal.toFixed(2);
+          inputAmount.textContent = `$${tipAmount.toFixed(2)}`;
+          inputTotal.textContent = `$${tipTotal.toFixed(2)}`;
         }
       });
     });
   }
-  _disableBtn() {
-    btn.forEach((btnSelected) => {
-      btnSelected.classList.remove("selected-btn");
-      btnSelected.classList.add("btn");
-    });
-  }
-
+  //calculate tip with custom tip input
   _calculateTip() {
     if (!isFinite(inputPeople.value) || inputPeople.value <= 0) {
       error.classList.remove("hidden");
@@ -78,11 +68,11 @@ class App {
     if (bill && tip && people) {
       tipAmount = (bill * tip) / people;
       tipTotal = tipAmount + bill / people;
-      inputAmount.textContent = tipAmount.toFixed(2);
-      inputTotal.textContent = tipTotal.toFixed(2);
+      inputAmount.textContent = `$${tipAmount.toFixed(2)}`;
+      inputTotal.textContent = `$${tipTotal.toFixed(2)}`;
     }
   }
-
+  //reset values
   _reset() {
     bill = "";
     people = "";
@@ -90,8 +80,15 @@ class App {
     inputBill.value = "";
     inputPeople.value = "";
     inputTip.value = "";
-    inputAmount.textContent = "0.00";
-    inputTotal.textContent = "0.00";
+    inputAmount.textContent = "$0.00";
+    inputTotal.textContent = "$0.00";
+    btn.forEach((btnSelected) => {
+      btnSelected.classList.remove("selected-btn");
+      btnSelected.classList.add("btn");
+    });
+  }
+  //method for selecting custom input
+  _disableBtn() {
     btn.forEach((btnSelected) => {
       btnSelected.classList.remove("selected-btn");
       btnSelected.classList.add("btn");
